@@ -89,7 +89,9 @@ int main(int argc, char **argv)
       return 1;
     }
 
-  int id = atoi(argv[1]) - 1;
+  int id = atoi(argv[1]);
+
+  id = (id > 0) ? id - 1 : 0;
 
   printf("id - %d\n"
          "key - %s\n"
